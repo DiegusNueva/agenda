@@ -6,25 +6,24 @@ let variable = '1';
   selector: 'app-root',
   template: `
     <h1>
-      ${variable}
-      {{ title }}
+      {{ talk.title }}
     </h1>
   `,
   //templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title: any;
+export class AppComponent{
+    
+    talk: Talk;
 
   constructor() {
 
-   
-this.fun(undefined);
-    
+      this.talk = {title: 'Rx'};
+
+  }
+
 }
 
-fun(x='defecto...'){
-  
-  console.log(x);
-}
+interface Talk{
+  title: string;
 }
