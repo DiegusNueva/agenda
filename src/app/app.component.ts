@@ -8,13 +8,17 @@ let variable = '1';
     <h1>
       {{ talk.title }}
     </h1>
+
+    <app-talks></app-talks>
+
+
   `,
   //templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent{
     
-    talk: Talk;
+    talk;
 
   constructor() {
 
